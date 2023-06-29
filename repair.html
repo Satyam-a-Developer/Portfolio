@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://kit.fontawesome.com/d231705272.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Estonia&display=swap');
+
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: lightblue;
+            border-radius: 50px;
+            border-radius: 50px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+            width: 5px;
+            background: #333;
+        }
+
+        body {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            background: #333;
+            z-index: 0;
+
+
+
+
+
+        }
+
+
+
+        i {
+            float: right;
+            margin-right: 20px;
+            padding: 0%;
+            /* margin-top: 10px; */
+            color: rebeccapurple;
+
+
+        }
+
+        .card {
+
+            display: none;
+            justify-content: space-between;
+            background: #333;
+            padding-right: 100px;
+            min-width: 80vw;
+
+        }
+
+        li {
+            padding-left: 110px;
+        }
+
+        li a {
+
+            font-family: 'Comforter Brush', cursive;
+            font-family: 'Estonia', cursive;
+            text-decoration: none;
+            font-size: 50px;
+            padding-right: 230px;
+            color: aqua;
+
+        }
+
+        .box {
+
+
+            z-index: 0;
+
+
+
+
+
+            display: grid;
+            grid-column-gap: 11rem;
+            justify-content: center;
+            font-weight: 100;
+            font-size: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            align-items: center;
+            color: blueviolet;
+        }
+
+
+
+
+
+        h3 {
+            text-shadow: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em red;
+
+            display: flex;
+            justify-content: center;
+            padding-left: 40px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .box1 {
+            z-index: 0;
+
+
+
+            height: 400px;
+            background: #181818;
+            height: 400px;
+
+            width: 300px;
+
+            padding-top: 10%;
+
+            width: 300px;
+
+            padding-top: 10%;
+            margin-top: 100px;
+
+
+            border-radius: 40px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+
+            border-radius: 20px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+
+
+
+
+        }
+
+        .img {
+
+            z-index: 18;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .box2 {
+            z-index: 0;
+
+            height: 400px;
+            background: #181818;
+            height: 400px;
+
+            width: 300px;
+
+            padding-top: 10%;
+
+            border-radius: 20px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+
+            /* position:relative;
+; */
+            width: 300px;
+
+            padding-top: 10%;
+            margin-top: 100px;
+
+            border-radius: 40px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+        }
+
+        li {
+            padding-bottom: 100px;
+
+            /* margin-top: 100px; */
+            list-style: none;
+        }
+
+        .circle {
+            background: orange;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            margin: auto;
+            position: relative;
+            top: 16px;
+
+        }
+
+        .box3 {
+
+
+            height: 400px;
+            background: #181818;
+            height: 400px;
+
+            width: 300px;
+
+
+            padding-top: 10%;
+            margin-top: 100px;
+
+            border-radius: 40px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+        }
+
+        .box4 {
+
+            height: 400px;
+            background: #181818;
+            height: 400px;
+
+            width: 300px;
+
+
+            padding-top: 10%;
+            margin-top: 100px;
+
+            border-radius: 40px;
+            border: 25px 25px 25px solid red 1px;
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+        }
+
+        .cart {
+            position: relative;
+            right: 40px;
+        }
+
+
+        .circle2 {
+            background: red;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            margin: auto;
+            transform: translateX(30px);
+
+        }
+        *{
+            margin: 0%;
+            
+        }
+
+
+
+        .button {
+            position: relative;
+            top: 10px;
+            background: #333;
+            left: 92px;
+
+            border-radius: 50px;
+
+            font-size: 20px;
+
+            border: none;
+            padding: 0px 20px 0;
+
+        }
+
+        .cart {
+            position: relative;
+            top: 50px;
+            right: 18px;
+            border-radius: 50px;
+            background: #333;
+            border: none;
+            font-size: 18px;
+        }
+
+        .b {
+            display: none;
+
+        }
+
+        .circle3 {
+            background: green;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            margin: auto;
+            position: relative;
+            right: 30px;
+            bottom: 14px;
+        }
+
+        h1 {
+
+margin-top: 40px;
+            font-size: 6rem;
+            text-shadow: 1px 1px 2px rgba(14, 93, 15, 0.729), 0 0 1em rgb(218, 231, 231), 0 0 0.2em rgb(197, 206, 206);
+            /* padding: 50px 0 0; */
+            min-width: 90vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button:hover {
+            background: lightblue;
+            color: #333;
+        }
+
+        .cart:hover {
+            background: lightgreen;
+            color: #333;
+        }
+
+        @media (max-width:856px) {
+            body {
+
+
+                overflow-x: hidden;
+                padding-top: 10px;
+
+
+
+
+            }
+
+            .box {
+                margin-left: 10px;
+                margin-right: 10px;
+
+            }
+
+            .card {
+
+                min-height: 100vh;
+
+
+
+
+
+
+            }
+
+
+            ul li {
+                min-width: 100px;
+                list-style: none;
+                margin-top: 10px;
+            }
+
+            li {
+                padding: 80px;
+
+                width: 400px;
+            }
+
+            ul li a {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+
+
+
+
+
+
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="b">
+        <i class="fas fa-times fa-2x"></i>
+    </div>
+    <div class="i">
+        <i class="fas fa-cart-plus fa-2x"></i>
+    </div>
+    <div class="btn">
+        <i class="fas fa-grip-lines fa-2x"></i>
+    </div>
+
+    <div class="card">
+        <ul>
+            <li><a href="">first-page</a></li>
+            <li><a href="">service</a></li>
+
+            <li><a href="">copyright</a></li>
+        </ul>
+    </div>
+    <h1>Jordan</h1>
+    <div class="box">
+
+        <div class="box1">
+            <h3>Air Jordan 1 PSG Black _ Red AR3254-001</h3>
+            <div class="img" draggable="true" ondragstart="drag(event)">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcREnxX_kKPRfXSMIhZ91MMsX5866SrPwIULdrtfVLu7yHHCk-sAz3L7ys2Ky1XeKXJpl7DHr6wwvciJL8pHFTdHKTlF2Aqns-k27t9-_8Z_xT4wYfohX0KnJg&usqp=CAE"
+                    width="150px" height="150px">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+        </div>
+        <div class="box2">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Air Jordan 1 Retro High Tie Dye 🦕.jpg" width="150px" height="150px
+                ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+
+
+
+
+        </div>
+        <div class="box3">
+            <h3>Jordan 1 Retro High Og Court Purple 2.0 2020</h3>
+            <div class="img">
+                <img src="./Size 8.5 - Jordan 1 Retro High Og Court Purple 2.0 2020.jpg"" width
+                =" 150px" height="150px
+                ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Air Jordan 1 Retro High OG 'University Blue'.jpg" width="150px" height="150px
+                ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>WMNS Air Jordan 1 High OG</h3>
+            <div class="img">
+                <img src="./WMNS Air Jordan 1 High OG.jpg" width="150px" height="150px
+                ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG HYPER ROYAL 555088 </h3>
+            <div class="img">
+                <img src="./Jordan 1 Mid SE Multi-Color (W) - 9.5W.png" width="150px" height="150px
+                ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+
+
+
+    </div>
+    <h1>
+        yezzy
+    </h1>
+    <div class="box">
+
+
+        <div class="box4">
+            <h3>adidas YEEZY Foam RNNR “Ararat” sneakers - White</h3>
+            <div class="img">
+                <img src="./adidas YEEZY Foam RNNR “Ararat” sneakers - White.jpg" width="150px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Adidas YEEZY Yeezy 450</h3>
+            <div class="img">
+                <img src="./Adidas YEEZY Yeezy 450.png" width="150px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Adidas Yeezy 700 V3 'Safflower' Shoes - Size 5.5.png" width="190px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Adidas Yeezy Boost 700 Wave Runner - 6.5.jpg" width="190px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Adidas YEEZY Yeezy Boost 700.jpg" width="150px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+        <div class="box4">
+            <h3>Air Jordan 1 Retro High OG 'University Blue</h3>
+            <div class="img">
+                <img src="./Adidas Yeezy Boost 700 V2 “Vanta” - 10.jpg" width="150px" height="150px
+            ">
+            </div>
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+
+            <button class="button">buy now</button>
+
+
+
+            <button class="cart">add to cart</button>
+
+        </div>
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        let accounts = [];
+        $('.button').click(function () {
+            // location.href = 'https://www.nike.com/in/w/jordan-shoes-37eefzy7ok'
+            async function getAccount() {
+      accounts = await ethereum.request({
+        method: 'eth_requestAccounts'
+      });
+    }
+    getAccount()
+            
+//Sending Ethereum to an address
+
+ let transaction = ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [{
+        from: accounts[0],
+        to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
+        value: '1000000000000000'
+
+
+      }, ],
+    })
+
+   
+
+        console.log(transaction)
+  
+
+        })
+
+       
+
+        $('.btn').click(function () {
+            $(".card").toggle(1000)
+            $('.box').toggle(1000)
+            $('.btn').hide(100)
+            $('.b ').css('display', 'block')
+
+        })
+        $('.b ').click(function () {
+            $('.btn').show()
+            $('.b ').hide(function () {
+                $('.box').toggle(1000)
+                $('.card').toggle(0)
+            })
+        })
+
+
+        $(' .circle').on('click', function () {
+            $('.circle').css('border', "3px solid red")
+        })
+    </script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/Draggable.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+        Draggable.create("  .img", {
+            autoScroll: 0.5,
+
+            onDrag: function () {
+
+                if (this.hitTest(" .i ")) {
+                    gsap.to(this.target, {
+                        duration: 1.6,
+                        opacity: 0,
+                        scale: 0,
+                        originimg: "center"
+                    });
+                }
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.to('.box', {
+            scrollTrigger: {
+                trigger: 'box',
+
+            },
+            x: 50,
+            duration: 4,
+            stagger: 1.3,
+
+
+        })
+
+
+
+        gsap.from(".box", {
+            opacity: 0,
+            duration: 2,
+            y: -50,
+            stagger: 1.3,
+
+
+        })
+    </script>
+</body>
+
+</html>

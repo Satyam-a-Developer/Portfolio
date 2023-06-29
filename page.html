@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d231705272.js" crossorigin="anonymous"></script>
+    <style>
+        /* .box{
+            height: 200px;
+            width: 200px;
+              background-image:url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           position: absolute;
+           flex-direction: row;
+
+
+
+        } */
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* // background: rgb(240,255,240); */
+            background: #f5fffa;
+        }
+
+        h1 {
+            -webkit-text-stroke: 2px red;
+            color: white;
+            position: relative;
+            font-size: 5rem;
+            /* font-weight: bold; */
+            display: flex;
+            justify-content: center;
+
+
+
+        }
+
+        /* .row h1::before {
+            content: "";
+            background: blue;
+            width: 3em;
+          
+           
+            height: 5px;
+            position: absolute;
+        }
+  */
+
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0087ca;
+            /* transform-origin: bottom right; */
+            transition: transform 0.25s ease-out;
+        }
+
+
+        .row h1:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }
+
+
+        .box {
+            display: grid;
+
+            justify-content: center;
+            font-weight: 5000;
+            font-size: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            align-items: center;
+            color: black;
+
+
+        }
+
+        .box1 {
+            height: 200px;
+            width: 200px;
+            padding-top: 10%;
+            background-color: transparent;
+            border-radius: 40px;
+            border: 25px 25px 25px solid red 1px;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+
+
+
+        }
+
+        .box1:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box2 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            background: transparent;
+            margin: 10px 10px 10px solid;
+
+
+            transition: transform 0.5s, background 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box3:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+
+        }
+
+        .box8 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            background: transparent;
+            margin: 10px 10px 10px solid;
+
+
+            transition: transform 0.5s, background 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box8:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+
+        }
+
+        .box9 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            background: transparent;
+            margin: 10px 10px 10px solid;
+
+
+            transition: transform 0.5s, background 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box9:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+
+        }
+
+        .box10 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            background: transparent;
+            margin: 10px 10px 10px solid;
+
+
+            transition: transform 0.5s, background 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box10:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box7 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            background: transparent;
+            margin: 10px 10px 10px solid;
+
+
+            transition: transform 0.5s, background 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box7:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box2:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+        }
+
+        .box4:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box5:hover {
+            background-position: center;
+            background-size: cover;
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box6:hover {
+            background-position: center;
+            background-size: cover;
+
+            background-image: url('https://media.istockphoto.com/photos/abstract-blurred-gradient-background-in-bright-colors-colorful-smooth-picture-id1071588902?k=20&m=1071588902&s=612x612&w=0&h=I0UoBsEAamAalXy_Npx5cB9qBk4XC_kJKPpRON1WZ6g=');
+            transform: scale(1.1);
+            box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+
+
+        }
+
+        .box3 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .box4 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            margin-top: 10px;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .box5 {
+            height: 200px;
+            width: 200px;
+            border-radius: 40px;
+            margin-top: 10px;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .box6 {
+            height: 200px;
+            width: 200px;
+            margin-top: 10px;
+            border-radius: 40px;
+            background: transparent;
+
+            transition: transform 1s, background 1s;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .service {
+
+
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(232, 217, 217, 0.717);
+            border-radius: 50px;
+            border: 2px solid black;
+            box-shadow: inset 2px 2px 3px red;
+            max-width: 100vw;
+            height: 200px;
+        }
+
+        h2 {
+            padding-top: 20px;
+            color: rgb(6, 4, 4);
+            display: flex;
+            justify-content: center;
+        }
+
+        .data {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top: 30px;
+
+        }
+
+        li {
+
+            list-style: none;
+        }
+
+        li a {
+            color: blue;
+            font-size: 50px;
+            text-decoration: none;
+        }
+
+        .no3 {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            height: 50px;
+            background-color: rgb(27, 169, 155);
+        }
+        svg{
+          height: 100px;
+        
+            width: 100px;
+      stroke: red;
+   
+     fill:transparent;
+    animation: like 18s 1s infinite ease-in-out;
+   
+      stroke-dasharray:1128.496337890625 ;
+      stroke-dashoffset:1128.496337890625 ;
+        } 
+       path {
+         font-size: 100px;
+        height: 100px;
+            width: 500px;
+            height: 1000px;
+       } 
+        @keyframes like {
+ 
+
+      50% {
+        stroke-dashoffset: 0;
+       
+      }
+
+
+      100% {
+        stroke-dashoffset:1128.496337890625 ;
+   
+
+        transition: 1s;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <h1>our service
+
+        </h1>
+        <div class="box">
+
+            <div class="box1"><i class="fas fa-american-sign-language-interpreting"></i>*harry<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sa
+            </div>
+            <div class="box2">*pink<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit
+            </div>
+
+            <div class="box3">*harry<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="box4">*pink<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="box5">*harry<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="box6">*pink<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+
+
+            <div class="box7">*pink<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="box8">*pink<br>
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+        </div>
+    </div>
+    <div class="service">
+        <h2>Contact</h2>
+        <div class="data">
+            <svg>
+                <svg width="100" height="100" viewBox="0 0 158 181" fill="none" xmlns="http://www.w3.org/2000/svg" ml-update="aware"><link xmlns="" type="text/css" id="dark-mode" rel="stylesheet" href=""/><style xmlns="" type="text/css" id="dark-mode-custom-style"/>
+                  <path d="M68 153C66.1323 138.785 62.5505 125.097 58.5 111.333C53.6282 94.7782 49.1207 75.6661 36.3889 63.1111C25.2264 52.1037 30.7192 66.123 34.4444 72.2222C38.9193 79.5486 46.5134 95.7778 57.0556 94.5C66.5391 93.3505 74.9578 85.7329 81.5556 97.3333C87.7606 108.243 90.7432 125.818 89.3889 138.278C88.8646 143.102 87.7747 138.511 89 135.333C93.4507 123.789 91.3763 111.511 86.7778 100.333C82.1763 89.1481 75.8913 78.5992 69.5556 68.3333C60.0413 52.9174 49.7002 36.0167 35.2222 24.6667C4.95902 0.941811 -1.75553 49.1301 4.27778 69.5C12.0331 95.6837 29.3904 119.325 46.8889 139.778C55.4261 149.757 70.6623 165.208 82.3333 172.889C86.8664 175.872 96.6046 180.67 103 178.222C112.019 174.77 113.286 159.575 113.833 152.167C115.256 132.925 112.582 112.957 108.056 94.2778C104.911 81.3019 100.118 69.0283 95.7778 56.4444C93.7973 50.7027 91.2075 44.1137 91 37.8889C90.9847 37.431 91.9311 38.0028 92.3333 38.2222C96.99 40.7622 100.274 45.3686 103.167 49.6667C114.347 66.2775 123.888 83.8385 135.333 100.333C143.076 111.492 149.094 123.949 148.722 137.889C148.597 142.572 146.655 145.291 142.722 141.056C135.984 133.799 132.344 123.253 129.889 113.889C126.982 102.802 124.797 91.1831 130 80.7778C132.545 75.687 123.671 66.3634 121.167 62.7778C111.454 48.871 119.791 65.2093 124.5 60.5C125.911 59.0894 126.332 58.5921 124.556 57.5556C119.614 54.6731 116.905 49.9148 117.167 44.1667C117.588 34.9046 128.02 42.0111 131.111 45.7778C134.194 49.5356 141.625 62.0649 139.556 57.6667C136.598 51.3812 134.507 45.1725 133 38.3889C131.186 30.2243 129.771 22.5322 126.222 14.8889C123.103 8.17105 132.688 17.5502 134.5 19C135.862 20.0893 146.295 28.7494 145.778 22.3333C145.476 18.5894 144.986 12.3146 142.667 9.22222C141.071 7.09528 147.599 12.2079 150.222 11.7778C155.346 10.9378 156.607 6.24875 156 2" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+           
+            <li><a href="mailto:satyam.joshi567@gmail.com" target="_blank">Email</a></li>
+            <div class="no3">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script>
+        
+
+        let no3 = 0
+
+        function shesh2() {
+            no3++
+            if (no3 < 1523) {
+
+                requestAnimationFrame(shesh2)
+            }
+
+            let no34 = document.querySelector('.no3').innerHTML = no3
+        }
+        shesh2()
+
+        gsap.from('.row', {
+            opacity: 0,
+            duration: 2,
+            y: -50,
+            stagger: 0.6,
+
+        })
+    </script>
+</body>
+
+</html>
