@@ -3,5 +3,3 @@
 
 
 
-
-[project-link-for-preview](https://satyam-joshi-a-developer.github.io/Portfolio/)
